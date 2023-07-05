@@ -8,8 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { initializeApp } from "firebase/app";
-import { environment } from '../environments/environment';
 // Import Firebase modules + environment
+import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -41,13 +41,9 @@ import { map } from 'rxjs/operators';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    NgxPaginationModule,  // Include it in imports array
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule  {
-  // constructor() {
-  //   initializeApp(environment.firebaseConfig);
-  // }
-}
+export class AppModule  {}
