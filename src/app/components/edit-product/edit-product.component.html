@@ -31,6 +31,17 @@
                 </p>
               </div>
               <div class="col-md-12 mb-3">
+                <label>Price</label>
+                <input
+                  type="number"
+                  formControlName="price"
+                  class="form-control"
+                />
+                <p *ngIf="price.touched && price.invalid" class="error">
+                  <sup>*</sup>Please provide price
+                </p>
+              </div>
+              <div class="col-md-12 mb-3">
                 <label>Title</label>
                 <input
                   type="text"
@@ -57,16 +68,26 @@
                 </p>
               </div>
               <div class="col-md-12 mb-3">
-                <label>Seller Id</label>
-                <input
-                  type="text"
+                <label>Category</label>
+                <select
                   formControlName="sellerId"
                   class="form-control"
                   required
-                />
-                <!-- errors-->
+                >
+                  <option value="">Select a category</option>
+                  <option value="1">Phones</option>
+                  <option value="2">Computers & Laptops</option>
+                  <option value="3">Men's Clothing</option>
+                  <option value="3">Women's Clothing</option>
+                  <option value="4">Healthcare</option>
+                  <option value="5">Home Equipment</option>
+                  <option value="6">Electronics</option>
+                  <option value="7">Outdoor</option>
+                  <option value="8">Supermarket</option>
+                </select>
+                <!-- errors -->
                 <p *ngIf="sellerId.touched && sellerId.invalid" class="error">
-                  <sup>*</sup>Please provide Seller Id
+                  <sup>*</sup>Please select a category
                 </p>
               </div>
             </div>

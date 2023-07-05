@@ -29,7 +29,7 @@
           <th scope="col">Brand</th>
           <th scope="col">Price</th>
           <th scope="col">Images</th>
-          <th scope="col">Seller Id</th>
+          <th scope="col">Category</th>
           <th class="text-center" scope="col">Edit</th>
         </tr>
       </thead>
@@ -43,9 +43,24 @@
         >
           <td>{{ product.title }}</td>
           <td>{{ product.brand }}</td>
-          <td>{{ product.price }}</td>
+          <td>$ {{ product.price }}</td>
           <td><img src="{{ product.images }}" width="100px" /></td>
-          <td>{{ product.sellerId }}</td>
+          <!-- <td>{{ product.sellerId }}</td> -->
+          <td>
+            <ng-container [ngSwitch]="product.sellerId">
+              <ng-container *ngSwitchCase="1">Phones</ng-container>
+              <ng-container *ngSwitchCase="2">Computers & Laptops</ng-container>
+              <ng-container *ngSwitchCase="3">Men's Clothing</ng-container>
+              <ng-container *ngSwitchCase="4">Women's Clothing</ng-container>
+              <ng-container *ngSwitchCase="5">Healthcare</ng-container>
+              <ng-container *ngSwitchCase="6">Home Equipment</ng-container>
+              <ng-container *ngSwitchCase="7">Electronics</ng-container>
+              <ng-container *ngSwitchCase="8">Outdoor</ng-container>
+              <ng-container *ngSwitchCase="9">Supermarket</ng-container>
+              <ng-container *ngSwitchDefault>Unknown Category</ng-container>
+            </ng-container>
+          </td>
+
           <td class="text-center action-block">
             <span
               class="mr-2 btn btn-outline-primary btn-sm"
