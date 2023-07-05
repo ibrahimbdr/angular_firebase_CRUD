@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "iti-dashboard-e985b": {
+      "hosting": {
+        "ecommerce_angular": [
+          "iti-dashboard-e985b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "iti-dashboard-e985b"
+  }
+}
