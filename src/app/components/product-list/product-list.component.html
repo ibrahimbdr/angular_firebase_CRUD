@@ -45,9 +45,9 @@
           <td>{{ product.brand }}</td>
           <td>$ {{ product.price }}</td>
           <td><img src="{{ product.images }}" width="100px" /></td>
-          <!-- <td>{{ product.sellerId }}</td> -->
+          <!-- <td>{{ product.categoryId }}</td> -->
           <td>
-            <ng-container [ngSwitch]="product.sellerId">
+            <ng-container [ngSwitch]="product.categoryId">
               <ng-container *ngSwitchCase="1">Phones</ng-container>
               <ng-container *ngSwitchCase="2">Computers & Laptops</ng-container>
               <ng-container *ngSwitchCase="3">Men's Clothing</ng-container>

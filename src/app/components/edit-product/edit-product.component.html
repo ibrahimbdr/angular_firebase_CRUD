@@ -70,7 +70,7 @@
               <div class="col-md-12 mb-3">
                 <label>Category</label>
                 <select
-                  formControlName="sellerId"
+                  formControlName="categoryId"
                   class="form-control"
                   required
                 >
@@ -86,7 +86,10 @@
                   <option value="8">Supermarket</option>
                 </select>
                 <!-- errors -->
-                <p *ngIf="sellerId.touched && sellerId.invalid" class="error">
+                <p
+                  *ngIf="categoryId.touched && categoryId.invalid"
+                  class="error"
+                >
                   <sup>*</sup>Please select a category
                 </p>
               </div>

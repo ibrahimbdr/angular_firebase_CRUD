@@ -42,21 +42,16 @@ export class EditProductComponent implements OnInit {
   get images() {
     return this.editForm.get('images');
   }
-  get sellerId() {
-    return this.editForm.get('sellerId');
+  get categoryId() {
+    return this.editForm.get('categoryId');
   }
   updateProductData() {
     this.editForm = this.fb.group({
-      brand: ['', [Validators.required, Validators.minLength(2)]],
-      price: [''],
-      title: [
-        '',
-        [
-          Validators.required,
-        ],
-      ],
+      brand: ['', [Validators.required]],
+      price: ['', [Validators.required]],
+      title: ['', [Validators.required]],
       images: ['', [Validators.required]],
-      sellerId: ['', [Validators.required]]
+      categoryId: ['', [Validators.required]]
     });
   }
   goBack() {

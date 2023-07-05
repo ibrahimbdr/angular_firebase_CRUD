@@ -23,7 +23,7 @@ export class AddProductComponent implements OnInit {
       price: ['',[Validators.required]],
       title: ['',[Validators.required]],
       images: ['', [Validators.required]],
-      sellerId: ['', [Validators.required]]
+      categoryId: ['', [Validators.required]]
     });
   }
   get brand() {
@@ -38,8 +38,8 @@ export class AddProductComponent implements OnInit {
   get images() {
     return this.productForm.get('images');
   }
-  get sellerId() {
-    return this.productForm.get('sellerId');
+  get categoryId() {
+    return this.productForm.get('categoryId');
   }
   ResetForm() {
     this.productForm.reset();
